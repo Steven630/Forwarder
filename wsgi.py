@@ -31,7 +31,7 @@ def Home():
     if url and k:
         url = urllib.unquote(url.encode('utf-8')).replace(' ', r'%20')
         try:
-            req = urllib.Request(url)
+            req = urllib.request.Request(url)
             req.add_header('User-Agent', "Mozilla/5.0 (compatible; MSIE 9.0; Windows NT 6.1; Win64; x64; Trident/5.0)")
             req.add_header('Accept', "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8")
             ret = urllib.request.urlopen(req, timeout=timeout)
